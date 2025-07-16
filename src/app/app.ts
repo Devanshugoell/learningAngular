@@ -1,23 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { Signup } from './signup/signup';
-import { Profile } from './profile/profile';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Signup , Profile , Login],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
 })
+ 
+
 export class App {
-  title = 'Devanshu';
-  name = "Dev Goyal"
+ count = 1;
 
-  // We cannot declare variables here we have to write properties like this.
- // title = "Devnashu";     ✔
- // const name = "Devanshu Goyal" ;  ❌
+ counter = signal(10);
 
- //class ke andar properties banti h aur class ke bahar hamare variables 
- //and we can also declare variables in function 
+ getName (name : string) {
+     console.log(name)
+ }
 }
