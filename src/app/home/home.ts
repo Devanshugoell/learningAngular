@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import {  RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +10,29 @@ import { Router, RouterLink } from '@angular/router';
 
 
 export class Home {
-   constructor(private router: Router) {
-
-   }
-   
-  goToProfile() {
-    this.router.navigate(['profile'], {queryParams:{name : "Devan"}});
-
-   }
+  users = [{
+    id:'1',
+    name : 'ABCD',
+    age : 22,
+    email : 'devgoyal952@gmail.com'
+  },
+{
+    id:'2',
+    name : 'EFGH',
+    age : 23,
+    email : 'devgoyal953@gmail.com'
+  },
+{
+    id:'3',
+    name : 'IJKL',
+    age : 24,
+    email : 'devgoyal954@gmail.com'
+  },
+{
+    id:'4',
+    name : 'MNOP',
+    age : 25,
+    email : 'devgoyal955@gmail.com'
+  },
+]
 }

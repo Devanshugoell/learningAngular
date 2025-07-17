@@ -1,3 +1,11 @@
 <p>home works!</p>
 
-<button (click)="goToProfile()">Go to Profile page</button>
+<ul>
+  @for(user of users; track user) {
+  <li>
+    <a routerLink="user/{{ user.id }}/{{ user.name }}"
+      >{{ user.name }} {{ $index + 1 }}</a
+    >
+  </li>
+  }
+</ul>
