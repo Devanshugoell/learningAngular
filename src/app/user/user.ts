@@ -1,12 +1,11 @@
-
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
+  imports: [],
   templateUrl: './user.html',
-  styleUrls: ['./user.css']
+  styleUrl: './user.css'
 })
-export class UserComponent {
-  @Input() user: string = "";
-  @Input() city:string = "";
+export class User {
+ @Input() user  : string =  "";
 }
