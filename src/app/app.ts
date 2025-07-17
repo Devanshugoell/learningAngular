@@ -11,5 +11,8 @@ import { User } from './user/user';
 
 
 export class App {
-  users = ["John", "Jane", "Doe", "Alice", "Bob","Charlie","Eve"];
+
+  handleUser(user : string[]) {
+    console.log("User from child component:", user);
+  }
 }

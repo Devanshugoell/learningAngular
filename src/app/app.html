@@ -1,7 +1,3 @@
-<h1>Reuseable Components</h1>
+<h1>Pass data from child to parent</h1>
 
-@for(user of users; track user) {
-<div>
-  <app-user [user]="user"></app-user>
-</div>
-}
+<app-user (getUsers)="handleUser($event)"></app-user>
