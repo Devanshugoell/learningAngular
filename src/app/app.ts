@@ -1,20 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, Signal, signal, WritableSignal , computed } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,                 
+  imports: [RouterOutlet, ButtonModule,FormsModule], 
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })
- 
+
 
 export class App {
- count = 1;
 
- counter = signal(10);
+zoom = false;
 
- getName (name : string) {
-     console.log(name)
- }
+BigHeading = "100px";
+SmallHeading = "10px";
+
+updateHeadingSize() {
+  this.zoom = !this.zoom;
+}
+
+Bigger = "50px";
 }
