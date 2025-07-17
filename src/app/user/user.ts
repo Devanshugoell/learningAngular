@@ -1,25 +1,11 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
-  imports: [],
   templateUrl: './user.html',
-  styleUrl: './user.css'
+  styleUrls: ['./user.css']
 })
-
-
-export class User {
-
-  name:string|null = ""
-
-  constructor(private route: ActivatedRoute) {
-  }
-
-  ngOnInit() {
-     this.route.params.subscribe((params) => {
-      console.log(params);
-      this.name = params['name'];
-     })
-  } 
+export class UserComponent {
+  @Input() user: string = "";
 }
