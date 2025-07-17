@@ -13,4 +13,10 @@ import { UserComponent } from './user/user';
 
 
 export class App {
+ userName: string = "devanshu2323";
+
+  onUserChange(user : string) {
+    this.userName = user;
+
+  }
 }

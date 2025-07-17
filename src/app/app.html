@@ -1,3 +1,9 @@
 <div class="container">
-  <app-user user="devanshu"></app-user>
+  <app-user [user]="selectedUser.value" city="Gurugram"></app-user>
 </div>
+
+<select #selectedUser (change)="onUserChange(selectedUser.value)" name="" id="">
+  <option value="devanshu2323">devanshu2323</option>
+  <option value="Anil Sidhu">Anil Sidhu</option>
+  <option value="Sam aultman">Sam aultman</option>
+</select>

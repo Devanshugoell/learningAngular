@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
   @Input() user: string = "";
+  @Input() city:string = "";
 }
