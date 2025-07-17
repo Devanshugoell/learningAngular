@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav li a {
+  text-decoration: none;
+}
+
+.active {
+  background-color: blue;
+}
