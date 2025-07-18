@@ -1,9 +1,8 @@
-<h1>Life cycle methods in Angular</h1>
+<button (click)="getProductData()">Load Product</button>
 
-<h1>Count : {{ count }}</h1>
-
-<button (click)="updateCounter()">Update Count</button>
-
-<div *ngIf="count !== 5">
-  <app-user [counter]="count" #user></app-user>
+@for(item of productData; track item) {
+<div>
+  <h3>{{ item.name }}</h3>
+  <p>Price: {{ item.price }}</p>
 </div>
+}

@@ -1,34 +1,27 @@
-import {
-  afterEveryRender,
-  Component,
-  afterNextRender,
-  ViewChild,
-} from "@angular/core";
-import { User } from "./user/user";
-import { NgIf } from "@angular/common";
+import { Component } from "@angular/core";
+import { Product } from "./services/product";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [User, NgIf],
+  imports: [],
   templateUrl: "./app.html",
   styleUrls: ["./app.css"],
 })
 export class App {
-  @ViewChild("user") User: any;
-  count = 0;
+  productData:
+    | {
+        name: string;
+        price: number;
+      }[]
+    | undefined;
 
-  constructor() {
-    afterEveryRender(() => {
-      console.log("afterEveryRender called", this.User.counter); // Called after every change detection cycle
-    });
-
-    afterNextRender(() => {
-      console.log("afterNextRender called", this.User.counter); // Called after the next change detection cycle
-    });
+  constructor(private Product: Product) {
+    console.log("App component initialized");
   }
 
-  updateCounter() {
-    this.count++;
+  getProductData() {
+    this.productData = this.Product.getProductData();
+    console.log("Product data loaded:", this.productData);
   }
 }
