@@ -1,20 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { User } from './user/user';
 
 @Component({
   selector: 'app-root',
   standalone: true,                 
-  imports: [User], 
+  imports: [CommonModule], 
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })
 
 
 export class App {
-  users: undefined|string[] ;
+  title = `hi i am the parent component`;
+  name = 'Devanshu';
 
-  handleUser(user : string[]) {
-    console.log("User from child component:", user);
-    this.users = user;
-  }
+  amount = 1000;
+
+  currentDate  = new Date();
 }
