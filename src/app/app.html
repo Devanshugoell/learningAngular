@@ -1,0 +1,12 @@
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+  <input type="text" ngModel placeholder="Enter your name" name="name" />
+  <button>Add User</button>
+</form>
+
+@for(user of users; track user){
+<ul>
+  <li>{{ user.name }}</li>
+  <li>{{ user.age }}</li>
+  <li>{{ user.email }}</li>
+</ul>
+}
