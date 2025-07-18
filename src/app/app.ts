@@ -1,20 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, Input } from "@angular/core";
+import { CurrencyConverterPipe } from "./pipe/currency-converter-pipe";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,                 
-  imports: [CommonModule], 
-  templateUrl: './app.html',
-  styleUrls: ['./app.css'],
+  selector: "app-root",
+  standalone: true,
+  imports: [CommonModule, CurrencyConverterPipe],
+  templateUrl: "./app.html",
+  styleUrls: ["./app.css"],
 })
-
-
 export class App {
-  title = `hi i am the parent component`;
-  name = 'Devanshu';
-
-  amount = 1000;
-
-  currentDate  = new Date();
+  amount: number = 10;
 }
