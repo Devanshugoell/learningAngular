@@ -1,3 +1,9 @@
-<h1>Custom Pipes in Angular</h1>
+<h1>Life cycle methods in Angular</h1>
 
-<h2>{{ amount | currencyConverter }}</h2>
+<h1>Count : {{ count }}</h1>
+
+<button (click)="updateCounter()">Update Count</button>
+
+<div *ngIf="count !== 5">
+  <app-user [counter]="count" #user></app-user>
+</div>
