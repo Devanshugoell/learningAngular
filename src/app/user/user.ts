@@ -12,7 +12,11 @@ export class User {
   @Output() getUsers = new EventEmitter<string[]>();
   users = ["John", "Jane", "Doe", "Alice", "Bob", "Charlie", "Eve"];
 
-  ngOnInit() {
+  // ngOnInit() {
+  //   this.getUsers.emit(this.users);
+  // } 
+
+  loadData() {
     this.getUsers.emit(this.users);
-  } 
+  }
 }

@@ -11,8 +11,10 @@ import { User } from './user/user';
 
 
 export class App {
+  users: undefined|string[] ;
 
   handleUser(user : string[]) {
     console.log("User from child component:", user);
+    this.users = user;
   }
 }
